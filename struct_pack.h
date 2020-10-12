@@ -61,6 +61,7 @@ class StructPack
         template<typename T>
         std::string pack(const std::string &struct_type, T t)
         {
+            end = (struct_type == "<") ? little_end : big_end;
             hex_representation += tToHex(t);
             std::string ret = hex_representation;
             hex_representation.clear();
