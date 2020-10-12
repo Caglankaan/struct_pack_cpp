@@ -30,7 +30,7 @@ class StructPack
             
             
             std::string str{};
-            if(end & little_end)
+            if(end == little_end)
             {
                 for(int i = sizeof(T)*2; i > 0; i-=2)
                 {
